@@ -11,5 +11,13 @@ const createProduct = async (req: Request, res: Response) => {
   return res.status(201).json(createdProduct);
 };
 
-const productController = { createProduct };
+const getAll = async (_req: Request, res: Response) => {
+  const allProducts = await productService.getAll();
+  if (!allProducts) {
+    return res.status(404).json({ message: 'no product was found' });
+  }
+  return res.status(200).json(allProducts);
+};
+
+const productController = { createProduct, getAll };
 export default productController;
