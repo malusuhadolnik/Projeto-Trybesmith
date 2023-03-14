@@ -3,3 +3,8 @@ export interface Product {
     name: string;
     amount: string;
 }
+
+export interface NewProduct {
+    name: string;
+    amount: string;
+}
