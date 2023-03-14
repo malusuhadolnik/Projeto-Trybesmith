@@ -8,7 +8,7 @@ const createProduct = async (req: Request, res: Response) => {
     return res.status(400).json({ message: '"name" and "amount" must be provided'})
   }
   const createdProduct = await productService.createProduct(newProduct);
-  return res.status(200).json(createdProduct);
+  return res.status(201).json(createdProduct);
 };
 
 const productController = { createProduct };
