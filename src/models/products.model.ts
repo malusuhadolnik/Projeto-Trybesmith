@@ -6,7 +6,7 @@ const createProduct = async (product: Product) : Promise<Product> => {
   const { name, amount } = product;
 
   const [result] = await connection.execute<ResultSetHeader>(
-    'INSERT INTO books (name, amount) VALUES (?, ?)',
+    'INSERT INTO products (name, amount) VALUES (?, ?)',
         [name, amount]
   );
   const { insertId: id } = result;
