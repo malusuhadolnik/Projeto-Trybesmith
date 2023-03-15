@@ -1,14 +1,13 @@
-import { RowDataPacket } from 'mysql2';
 import connection from './connection';
 import { User} from '../interfaces';
 
-const getUserByUsername = async(username: string): Promise<User[]> => {
-  const [rows] = await connection.execute<RowDataPacket[] & User[]>(
+const getUserByUsername = async(username: string): Promise<User> => {
+  const [data]= await connection.execute(
     'SELECT * FROM Trybesmith.users WHERE username = ?',
     [username],
   );
-  console.log(rows);
-  return rows;
+  const [user] = data as User[];
+  return user || null;
 };
 
 const loginModel = { getUserByUsername };
