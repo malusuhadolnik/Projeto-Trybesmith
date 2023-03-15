@@ -7,6 +7,7 @@ const getUserByUsername = async(username: string): Promise<User[]> => {
     'SELECT * FROM Trybesmith.users WHERE username = ?',
     [username],
   );
+  console.log(rows);
   return rows;
 };
 
