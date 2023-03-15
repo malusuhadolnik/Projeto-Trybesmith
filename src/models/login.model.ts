@@ -1,8 +1,8 @@
 import connection from './connection';
-import { User} from '../interfaces';
+import { User } from '../interfaces';
 
-const getUserByUsername = async(username: string): Promise<User> => {
-  const [data]= await connection.execute(
+const getUserByUsername = async (username: string): Promise<User> => {
+  const [data] = await connection.execute(
     'SELECT * FROM Trybesmith.users WHERE username = ?',
     [username],
   );
