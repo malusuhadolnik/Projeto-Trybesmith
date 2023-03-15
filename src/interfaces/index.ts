@@ -27,3 +27,8 @@ export interface Order {
   userId: number;
   productsIds: number[];
 }
+
+export interface UserCredentials {
+  username: string;
+  password: string;
+}
