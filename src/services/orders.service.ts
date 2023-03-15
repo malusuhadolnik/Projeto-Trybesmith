@@ -1,10 +1,9 @@
-import orderModel from "../models/orders.model";
-import { Order } from '../interfaces';
+import orderModel from '../models/orders.model';
 
 const getAllOrders = async () => {
-    const allProducts = await orderModel.listAllOrders();
-    return allProducts;
-  };
+  const allProducts = await orderModel.listAllOrders();
+  return allProducts;
+};
 
-  const orderService = { getAllOrders };
-  export default orderService;
+const orderService = { getAllOrders };
+export default orderService;

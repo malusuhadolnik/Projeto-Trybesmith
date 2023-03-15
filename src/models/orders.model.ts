@@ -8,11 +8,10 @@ const listAllOrders = async (): Promise<Order[]> => {
     FROM Trybesmith.orders AS ord
     INNER JOIN Trybesmith.products AS prod
     ON ord.id = prod.order_id
-    GROUP BY ord.id`
-    );
-return rows;
+    GROUP BY ord.id`,
+  );
+  return rows;
 };
 
 const orderModel = { listAllOrders };
 export default orderModel;
-
