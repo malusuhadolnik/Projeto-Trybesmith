@@ -46,7 +46,7 @@ Os arquivos desenvolvidos por mim estão na pasta src. Os demais foram desenvolv
 
 ## Tecnologias usadas
 
->Back-End
+>Back-End:
 Docker, docker-compose, SQL, Node.js, JWT
 
 ## Instalando Dependências
